@@ -1,0 +1,8 @@
+<form method = "POST" action="/todos/<%= @todo.id %>">
+<input id="hidden" type="hidden" name="_method" value="patch">
+<label for="content">Edit todo content here: </label>
+<input type="text" name="todo[content]" value = "<%= @todo.content %>" >
+<label for="done"> Completed? </label>
+<input type="checkbox" name="todo[done]" value="true" <%= @todo.done ? "checked" : nil %> >
+<input type="submit"> 
+</form>

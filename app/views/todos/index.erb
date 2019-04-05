@@ -1,0 +1,8 @@
+<h1> This is <%=@user.name %>'s page.</h1>
+<ul>
+    <% @todos.each do |todo|%>
+        <li> <a href = "/todos/<%= todo.id  %>">  <%= todo.content %> </a></li>
+    <%end%>
+</ul>
+
+<button><a href="/todos/new"> Make New Todo </button></a>
